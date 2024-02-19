@@ -1,3 +1,7 @@
+from random import seed
+from random import random
+from random import randint
+
 class Tank(object):
     def __init__(self, name):
         self.name = name    #nome do tanque
@@ -29,11 +33,20 @@ class Tank(object):
         else:
             print(self.name, "has no shells!")
 
-meuTanque = Tank("Bob")
-meuTanque2 = Tank("Jack")
-meuTanque.fire_at(meuTanque2)
-print(meuTanque)
-print(meuTanque2)
+
+meuTanque1 = Tank("nome1")
+meuTanque2 = Tank("nome2")
+meuTanque3 = Tank("nome3")
+meuTanque4 = Tank("nome4")
+meuTanque5 = Tank("nome5")
 
 
+lista =[meuTanque1, meuTanque2, meuTanque3, meuTanque4, meuTanque5]
 
+numero1 = randint( 0 ,len(lista) -1 )
+numero2 = randint( 0 ,len(lista)-1 )
+
+lista[numero1].fire_at( lista[numero2] )
+
+
+        
